@@ -1,24 +1,9 @@
-# README
+# Hot Dog Database API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An API that allows users to GET and POST reviews about various hot dog destinations around the world. Here are some user stories:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [ ] As a user, I want to GET and POST reviews about hot dog destinations.
+- [ ] As a user, I want to GET reviews by country or city.
+- [ ] As a user, I want to see the most popular hot dog destinations by number of reviews or by overall rating.
+- [ ] As a user, I want to PUT and DELETE reviews, but only if I wrote them. (I will start by requiring a user_name param to match the user_name of the author on the message. I will try authentication later.)
+- [ ] As a user, I want to look up random destinations just for fun.
