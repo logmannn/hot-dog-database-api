@@ -3,12 +3,15 @@ require 'pry'
 class QuotesController < ApplicationController
   def index
     query = params[:query]
+    author = params[:author]
 
-    @quotes = Quote.search_content(query)
-    json_response(@quotes)
-    # @quote = {"quotation": "The secret of getting ahead is getting started."}
-    # @quotes = Quote.all
-    # json_response(@quotes)
+    if query 
+      @quotes = Quote.search_content(query)
+      json_response(@quotes)
+    else
+      @author = Quote.search_author(author)
+      json_response(@author)
+    end
   end
 
   def show
