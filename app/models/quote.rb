@@ -1,3 +1,4 @@
 class Quote < ApplicationRecord
-  #code 
+  validates :author, :presence => true
+  validates :content, :presence => true
 end
