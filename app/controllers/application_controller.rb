@@ -12,5 +12,5 @@ class ApplicationController < ActionController::API
     json_response({ message: exception.message }, :partial_content)
   end
 
-
+# 
 end
