@@ -1,8 +1,14 @@
+require 'pry'
+
 class QuotesController < ApplicationController
   def index
-    @quote = {"quotation": "The secret of getting ahead is getting started."}
-    @quotes = Quote.all
+    query = params[:query]
+
+    @quotes = Quote.search_content(query)
     json_response(@quotes)
+    # @quote = {"quotation": "The secret of getting ahead is getting started."}
+    # @quotes = Quote.all
+    # json_response(@quotes)
   end
 
   def show

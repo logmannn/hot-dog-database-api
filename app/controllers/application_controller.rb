@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
     json_response({ message: exception.message }, :not_found)
   end
 
-  # failed update / put or failed create / post 
+  # failed update / put or failed create / post
   rescue_from ActiveRecord::RecordInvalid do |exception|
     json_response({ message: exception.message }, :partial_content)
   end
