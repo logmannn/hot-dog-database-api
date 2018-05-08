@@ -1,4 +1,5 @@
 class Store < ApplicationRecord
+  has_many :reviews
   validates :store_name, :presence => true
   # validates :content, :presence => true
   # #
