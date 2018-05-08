@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
 
   include Response
-
+  
   # failed show / get
   rescue_from ActiveRecord::RecordNotFound do |exception|
     json_response({ message: exception.message }, :not_found)
@@ -12,5 +12,5 @@ class ApplicationController < ActionController::API
     json_response({ message: exception.message }, :partial_content)
   end
 
-# 
+#
 end
