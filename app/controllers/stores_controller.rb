@@ -14,13 +14,13 @@ class StoresController < ApplicationController
     image = params[:image]
     lat_long = params[:lat_long]
 
-    # if query
-    #   @stores = Store.search_content(query)
-    #   json_response(@stores)
-    # else
-      #  @author = Store.search_author(author)
-    #   json_response(@author)
-    # end
+    if query
+      @stores = Store.search_content(query)
+      json_response(@stores)
+    else
+      @store_name = Store.search_store(store_name)
+      json_response(@store_name)
+    end
   end
 
   def show
