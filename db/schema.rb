@@ -10,14 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_07_152954) do
+ActiveRecord::Schema.define(version: 2018_05_08_153850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "quotes", force: :cascade do |t|
-    t.string "content"
-    t.string "author"
+  create_table "stores", force: :cascade do |t|
+    t.string "store_name"
+    t.string "state"
+    t.string "city"
+    t.string "address_line_2"
+    t.string "description"
+    t.string "website"
+    t.string "phone_number"
+    t.string "review"
+    t.string "image"
+    t.string "lat_long"
   end
 
 end
